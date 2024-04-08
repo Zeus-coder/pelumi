@@ -30,6 +30,17 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import logolumi from "./logolumi.png";
+import ams from "./ams.png";
+import heza from "./heza.png";
+import black from "./black.png";
+import dcl from "./dcl.png";
+import jk from "./company/jk.png";
+import bng from "./company/bng.jpg";
+import gt from "./company/gt.png";
+import dcllogo from "./company/dcllogo.png";
+import amslg from "./company/amslg.png";
+import blck from "./company/blck.png";
+import Hezaa from "./company/Hezaa.png";
 
 export {
   logo,
@@ -61,4 +72,15 @@ export {
   jobit,
   tripguide,
   logolumi,
+  ams,
+  heza,
+  black,
+  dcl,
+  jk,
+  bng,
+  gt,
+  dcllogo,
+  amslg,
+  blck,
+  Hezaa,
 };
