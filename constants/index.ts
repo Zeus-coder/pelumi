@@ -23,6 +23,17 @@ import {
   jobit,
   tripguide,
   threejs,
+  ams,
+  heza,
+  black,
+  dcl,
+  jk,
+  bng,
+  gt,
+  dcllogo,
+  amslg,
+  blck,
+  Hezaa,
 } from "../assets";
 
 export const navLinks = [
@@ -116,52 +127,85 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "Customer Service Staff",
+    company_name: "Jekolo",
+    icon: jk,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Sep 2020 - Nov 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Developing and maintaining web applications using Wordpress and other related technologies.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Managed orders and purchases made through the web application.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Digital Marketing Manager",
+    company_name: "BestNewGifts",
+    icon: bng,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Nov 2021 - Jun 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "I built the companies website (bestnewgifts.com),",
+      "Managed the website and handled all their social media platforms",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Web Designer",
+    company_name: "Geoinfotech",
+    icon: gt,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Jun 2022 - Aug 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developing and maintaining web applications using Wordpress and other related technologies.",
+      "Managing email marketing services of the company.",
     ],
   },
   {
     title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    company_name: "Agro Market Square",
+    icon: amslg,
+    iconBg: "#383E56",
+    date: "(Contract)",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "BlackCardCoin",
+    icon: blck,
+    iconBg: "#383E56",
+    date: "(Contract)",
+    points: [
+      "Developing and maintaining web applications using Next.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+    ],
+  },
+  {
+    title: "Frontend Developer",
+    company_name: "Health Zone Africa",
+    icon: Hezaa,
+    iconBg: "#383E56",
+    date: "(Contract)",
+    points: [
+      "Developing and maintaining web applications using React Native and other related technologies.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Handleing Native and Cross platform development.",
+      "Collaborating with cross-functional teams including product manager, and other developers to create high-quality products.",
+    ],
+  },
+  {
+    title: "Full stack Developer",
+    company_name: "DotCircle Labs",
+    icon: dcllogo,
+    iconBg: "#E6DEDD",
+    date: "Jul 2023 - Feb 2024",
+    points: [
+      "Developing and maintaining web applications using Next.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
@@ -172,93 +216,136 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
+      "I thought it was impossible to make a website as beautiful as our product, but Pelumi proved me wrong.",
+    name: "Izu Areh",
+    designation: "COO",
+    company: "Agro Market Square",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
+      "I've never met a Mobile developer who truly cares about their clients' success and the product like Pelumi does.",
+    name: "Efosa",
+    designation: "CEO",
+    company: "Health Zone Africa",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
+      "After Pelumi optimized our website, our traffic increased by 50%. We can't thank him enough!",
+    name: "Gbenga Ojp",
+    designation: "Product Manager",
+    company: "DotCircle Labs",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Agro Market Sqaure",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Agro Market Square: Web-based platform Streamlining Nigeria's Agro Supply Chain and Empowering Stakeholders. Nigeria's most accessible agro value chain platform",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
         name: "tailwind",
         color: "pink-text-gradient",
       },
+      {
+        name: "redux toolkit",
+        color: "blue-text-gradient",
+      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: ams,
+    source_code_link: "https://agromarketsquare.com/",
   },
   {
-    name: "Job IT",
+    name: "HeZa",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "healthzoneafrica: Web application healthcare platform that connects patients to a wide range of qualified Healthcare Professionals (HCP).",
     tags: [
       {
-        name: "react",
+        name: "Mobile",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "react native",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Async Storage",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "node",
         color: "pink-text-gradient",
       },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: heza,
+    source_code_link: "https://healthzoneafrica.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Blackcardchain",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "BLACKCARD by BlackCardCoin.com offers a groundbreaking solution to seamlessly integrate your cryptocurrency into everyday life. With the privilege to participate in the ecosystem's profits through staking.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "node",
+        color: "green-text-gradient",
+      },
+      
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "recoil",
         color: "green-text-gradient",
       },
       {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "framer motion",
+        color: "blue-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: black,
+    source_code_link: "https://www.blackcardchain.com/",
+  },
+
+  {
+    name: "Dotcircle Labs",
+    description:
+      "Dotcircle Labs is a software development company, we build mobile and web applications. We are a team of software developers, designers, and product managers who are passionate about building high-quality software products.",
+    tags: [
+      {
+        name: "Next",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "framer motion",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+    ],
+    image: dcl,
+    source_code_link: "https://dotcirclelabs.com/",
   },
 ];
 
