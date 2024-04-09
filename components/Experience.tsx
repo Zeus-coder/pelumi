@@ -9,9 +9,9 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "@/app/style";
-import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { experiences } from "@/constants";
+import { SectionWrapper } from "@/hoc";
+import { textVariant } from "@/utils/motion";
 import Image from "next/image";
 
 interface Props {
@@ -76,14 +76,15 @@ const ExperienceCard = ({ experience }: Props) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant(0.5)}>
+      <div>
         <p className={`${styles.sectionSubText} text-center`}>
           What I have done so far
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Work Experience.
         </h2>
-      </motion.div>
+      </div>
+      
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>

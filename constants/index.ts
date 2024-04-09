@@ -186,7 +186,7 @@ const experiences = [
     ],
   },
   {
-    title: "Frontend Developer",
+    title: "Frontend Developer (Mobile Application)",
     company_name: "Health Zone Africa",
     icon: Hezaa,
     iconBg: "#383E56",
