@@ -67,6 +67,30 @@ const Tech = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* GitHub Stats */}
+      <motion.div
+        variants={fadeIn("up", "", 0.5, 1)}
+        className="mt-16 pt-10 border-t border-zinc-100"
+      >
+        <p className="font-mono text-[10px] text-zinc-400 uppercase tracking-[0.2em] mb-6">
+          GitHub Activity
+        </p>
+        <div className="flex flex-wrap gap-4 items-start">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=Zeus-coder&show_icons=true&bg_color=ffffff&title_color=18181b&text_color=71717a&icon_color=18181b&border_color=e4e4e7&count_private=true&hide_rank=false"
+            alt="GitHub Stats"
+            className="h-[160px] w-auto"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zeus-coder&layout=compact&bg_color=ffffff&title_color=18181b&text_color=71717a&border_color=e4e4e7&langs_count=6"
+            alt="Top Languages"
+            className="h-[160px] w-auto"
+          />
+        </div>
+      </motion.div>
     </>
   );
 };
