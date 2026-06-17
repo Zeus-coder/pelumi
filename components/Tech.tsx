@@ -92,8 +92,8 @@ const Tech = () => {
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://github-readme-activity-graph.vercel.app/graph?username=Zeus-coder&theme=github&area=true"
-          alt="GitHub Activity Graph"
+          src="https://ghchart.rshah.org/39d353/Zeus-coder"
+          alt="GitHub Contribution Calendar"
           className="mt-4 w-full"
         />
       </motion.div>
