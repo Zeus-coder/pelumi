@@ -79,17 +79,23 @@ const Tech = () => {
         <div className="flex flex-wrap gap-4 items-start">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://github-readme-stats.vercel.app/api?username=Zeus-coder&show_icons=true&bg_color=ffffff&title_color=18181b&text_color=71717a&icon_color=18181b&border_color=e4e4e7&count_private=true&hide_rank=false"
+            src="https://github-readme-stats-smoky-pi-88.vercel.app/api?username=Zeus-coder&show_icons=true&bg_color=ffffff&title_color=18181b&text_color=71717a&icon_color=18181b&border_color=e4e4e7&count_private=true&hide_rank=false"
             alt="GitHub Stats"
             className="h-[160px] w-auto"
           />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zeus-coder&layout=compact&bg_color=ffffff&title_color=18181b&text_color=71717a&border_color=e4e4e7&langs_count=6"
+            src="https://github-readme-stats-smoky-pi-88.vercel.app/api/top-langs/?username=Zeus-coder&layout=compact&bg_color=ffffff&title_color=18181b&text_color=71717a&border_color=e4e4e7&langs_count=6"
             alt="Top Languages"
             className="h-[160px] w-auto"
           />
         </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://github-readme-activity-graph.vercel.app/graph?username=Zeus-coder&bg_color=ffffff&color=71717a&line=18181b&point=18181b&area=true&hide_border=false&border_color=e4e4e7"
+          alt="GitHub Activity Graph"
+          className="mt-4 w-full"
+        />
       </motion.div>
     </>
   );
