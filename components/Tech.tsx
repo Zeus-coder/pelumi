@@ -92,7 +92,7 @@ const Tech = () => {
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://github-readme-activity-graph.vercel.app/graph?username=Zeus-coder&bg_color=ffffff&color=71717a&line=18181b&point=18181b&area=true&hide_border=false&border_color=e4e4e7"
+          src="https://github-readme-activity-graph.vercel.app/graph?username=Zeus-coder&theme=github&area=true"
           alt="GitHub Activity Graph"
           className="mt-4 w-full"
         />
