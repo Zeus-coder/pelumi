@@ -92,7 +92,7 @@ const Contact = () => {
           {sent ? (
             <div className="flex items-center justify-center h-full min-h-[280px] border border-zinc-200 rounded-2xl">
               <div className="text-center">
-                <p className="font-mono text-zinc-400 text-sm mb-2">// message sent</p>
+                <p className="font-mono text-zinc-400 text-sm mb-2">{"// message sent"}</p>
                 <p className="text-zinc-900 font-semibold">Thank you! I&apos;ll be in touch soon.</p>
               </div>
             </div>
