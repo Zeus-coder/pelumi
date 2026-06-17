@@ -34,7 +34,7 @@ const About = () => {
           </p>
           <p className="text-zinc-600 text-[17px] leading-[1.85]">
             I collaborate closely with product and engineering teams using
-            agile methodologies, and I'm always pushing for cleaner code,
+            agile methodologies, and I&apos;m always pushing for cleaner code,
             better UX, and measurable impact.
           </p>
         </motion.div>
