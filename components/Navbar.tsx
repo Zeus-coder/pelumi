@@ -2,100 +2,101 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { styles } from "@/app/style";
 import { navLinks } from "@/constants";
-import { menu, close, logolumi } from "@/assets";
 
 export const Navbar = () => {
   const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 100);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${
-        scrolled
-          ? "bg-white border-b border-zinc-200 shadow-sm"
-          : "bg-transparent"
+      className={`w-full fixed top-0 z-20 transition-all duration-300 ${
+        scrolled ? "bg-white/95 backdrop-blur-sm border-b border-zinc-100" : "bg-transparent"
       }`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6 sm:px-16 flex items-center justify-between h-16">
+
+        {/* Logo */}
         <Link
           href="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+          onClick={() => { setActive(""); window.scrollTo(0, 0); }}
+          className="font-mono text-base font-semibold text-zinc-900 hover:text-zinc-500 transition-colors"
         >
-          <Image
-            src={logolumi}
-            alt="logo"
-            className="w-9 h-9 object-contain rounded-full"
-          />
-          <p className="text-zinc-900 text-[18px] font-bold cursor-pointer flex">
-            Pelumi &nbsp;
-            <span className="sm:block hidden text-zinc-400 font-normal">
-              | React Native Dev
-            </span>
-          </p>
+          pelumi<span className="text-zinc-300">.</span>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        {/* Desktop nav */}
+        <ul className="hidden sm:flex items-center gap-8">
           {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-zinc-900" : "text-zinc-400"
-              } hover:text-zinc-900 text-[16px] font-medium cursor-pointer transition-colors duration-200`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+            <li key={nav.id}>
+              <a
+                href={`#${nav.id}`}
+                onClick={() => setActive(nav.title)}
+                className={`font-mono text-xs tracking-widest uppercase transition-colors ${
+                  active === nav.title ? "text-zinc-900" : "text-zinc-400 hover:text-zinc-900"
+                }`}
+              >
+                {nav.title}
+              </a>
             </li>
           ))}
+          <li>
+            <a
+              href="https://github.com/Zeus-coder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs tracking-widest uppercase text-zinc-400 hover:text-zinc-900 transition-colors"
+            >
+              GitHub ↗
+            </a>
+          </li>
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <Image
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } bg-white border border-zinc-200 shadow-lg absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4 p-6">
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-zinc-900" : "text-zinc-400"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        {/* Mobile toggle */}
+        <button
+          className="sm:hidden font-mono text-xs text-zinc-500 hover:text-zinc-900 transition-colors"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? "close" : "menu"}
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="sm:hidden bg-white border-b border-zinc-100">
+          <ul className="px-6 py-4 flex flex-col gap-4">
+            {navLinks.map((nav) => (
+              <li key={nav.id}>
+                <a
+                  href={`#${nav.id}`}
+                  onClick={() => { setActive(nav.title); setMenuOpen(false); }}
+                  className="font-mono text-xs tracking-widest uppercase text-zinc-500 hover:text-zinc-900 transition-colors"
+                >
+                  {nav.title}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a
+                href="https://github.com/Zeus-coder"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-xs tracking-widest uppercase text-zinc-400 hover:text-zinc-900 transition-colors"
+              >
+                GitHub ↗
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

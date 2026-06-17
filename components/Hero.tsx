@@ -1,44 +1,94 @@
-'use client';
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { styles } from "@/app/style";
-import { ComputersCanvas } from "./canvas/Computers";
+
+const NAME = "Bamisebi Pelumi.";
 
 export const Hero = () => {
+  const [text, setText] = useState("");
+  const [typing, setTyping] = useState(true);
+
+  useEffect(() => {
+    let i = 0;
+    const timer = setInterval(() => {
+      setText(NAME.slice(0, i + 1));
+      i++;
+      if (i === NAME.length) {
+        clearInterval(timer);
+        setTyping(false);
+      }
+    }, 72);
+    return () => clearInterval(timer);
+  }, []);
+
+  const fadeUp = (delay: number) => ({
+    initial: { opacity: 0, y: 12 },
+    animate: { opacity: 1, y: 0 },
+    transition: { delay, duration: 0.5, ease: "easeOut" },
+  });
+
   return (
-    <section className={`relative w-full h-screen mx-auto bg-white`}>
-      <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-zinc-900" />
-          <div className="w-[2px] sm:h-80 h-40 bg-zinc-200" />
-        </div>
+    <section className="min-h-screen flex items-center bg-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-16 py-32 w-full">
 
-        <div>
-          <h1 className={`${styles.heroHeadText}`}>
-            Hi, I&apos;m <span className="text-zinc-900 underline decoration-zinc-200 underline-offset-4">Bamisebi Pelumi</span>
+        {/* Prompt line 1 */}
+        <motion.p
+          {...fadeUp(0)}
+          className="font-mono text-sm text-zinc-400 mb-6"
+        >
+          ~/portfolio <span className="text-zinc-600">$</span> whoami
+        </motion.p>
+
+        {/* Name — typewriter */}
+        <motion.div {...fadeUp(0.1)}>
+          <h1 className="font-black text-zinc-900 leading-none tracking-tight text-[clamp(2.8rem,9vw,8rem)]">
+            {text}
+            <span className={`inline-block w-[0.08em] h-[0.85em] bg-zinc-900 ml-1 align-baseline ${typing ? "" : "cursor-blink"}`} />
           </h1>
-          <p className={`${styles.heroSubText} mt-2`}>
-            React Native mobile developer &mdash; building{" "}
-            <br className="sm:block hidden" />
-            robust apps with CLI &amp; Expo
+        </motion.div>
+
+        {/* Role */}
+        <motion.p
+          {...fadeUp(1.6)}
+          className="mt-6 font-mono text-zinc-500 text-base sm:text-lg"
+        >
+          React Native Developer &nbsp;·&nbsp; 5 yrs exp
+        </motion.p>
+
+        {/* CTAs */}
+        <motion.div {...fadeUp(1.9)} className="mt-10 flex flex-wrap gap-4">
+          <a
+            href="#work"
+            className="px-6 py-3 bg-zinc-900 text-white text-sm font-semibold rounded-lg hover:bg-zinc-700 transition-colors"
+          >
+            View Work ↓
+          </a>
+          <a
+            href="#contact"
+            className="px-6 py-3 border border-zinc-300 text-zinc-900 text-sm font-semibold rounded-lg hover:border-zinc-900 transition-colors"
+          >
+            Get in Touch
+          </a>
+        </motion.div>
+
+        {/* Prompt line 2 — skills */}
+        <motion.div {...fadeUp(2.3)} className="mt-16">
+          <p className="font-mono text-sm text-zinc-400 mb-3">
+            ~/portfolio <span className="text-zinc-600">$</span> cat skills.txt
           </p>
-        </div>
-      </div>
-
-      <ComputersCanvas />
-
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-zinc-900 flex justify-center items-start p-2">
-            <motion.div
-              animate={{ y: [0, 24, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
-              className="w-3 h-3 rounded-full bg-zinc-900 mb-1"
-            />
+          <div className="font-mono text-sm text-zinc-500 flex flex-wrap gap-x-8 gap-y-2 leading-relaxed">
+            <span>React Native CLI</span>
+            <span>Expo</span>
+            <span>TypeScript</span>
+            <span>Redux-Toolkit</span>
+            <span>React Query</span>
+            <span>Node.js</span>
+            <span>RudderStack</span>
+            <span>Git</span>
           </div>
-        </a>
+        </motion.div>
+
       </div>
     </section>
   );

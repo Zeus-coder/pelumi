@@ -7,52 +7,35 @@ import { SectionWrapper } from "@/hoc";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { testimonials } from "@/constants";
 
-const FeedbackCard = ({
-  index,
-  testimonial,
-  name,
-  designation,
-  company,
-}: any) => (
+const FeedbackCard = ({ index, testimonial, name, designation, company }: any) => (
   <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className="bg-white border border-zinc-200 shadow-card p-10 rounded-3xl xs:w-[320px] w-full"
+    variants={fadeIn("up", "spring", index * 0.15, 0.6)}
+    className="border border-zinc-200 rounded-2xl p-8 flex flex-col gap-6"
   >
-    <p className="text-zinc-300 font-black text-[48px]">&quot;</p>
-
-    <div className="mt-1">
-      <p className="text-zinc-700 tracking-wider text-[18px]">{testimonial}</p>
-
-      <div className="mt-7 flex justify-between items-center gap-1">
-        <div className="flex-1 flex flex-col">
-          <p className="text-zinc-900 font-semibold text-[16px]">
-            <span className="text-zinc-400">@</span> {name}
-          </p>
-          <p className="mt-1 text-zinc-400 text-[12px]">
-            {designation} of {company}
-          </p>
-        </div>
-      </div>
+    <span className="font-mono text-5xl text-zinc-200 leading-none select-none">&ldquo;</span>
+    <p className="text-zinc-700 text-[16px] leading-[1.75] flex-1">{testimonial}</p>
+    <div>
+      <p className="text-zinc-900 font-semibold text-sm">{name}</p>
+      <p className="font-mono text-zinc-400 text-xs mt-0.5">
+        {designation} · {company}
+      </p>
     </div>
   </motion.div>
 );
 
-const Feedbacks = () => {
-  return (
-    <div className="mt-12 bg-zinc-50 rounded-[20px]">
-      <div className={`bg-zinc-100 rounded-2xl ${styles.padding} min-h-[300px]`}>
-        <motion.div variants={textVariant(1)}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
-        </motion.div>
-      </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
-        ))}
-      </div>
+const Feedbacks = () => (
+  <>
+    <motion.div variants={textVariant(1)}>
+      <p className={styles.sectionSubText}>What others say</p>
+      <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+    </motion.div>
+
+    <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {testimonials.map((t, i) => (
+        <FeedbackCard key={t.name} index={i} {...t} />
+      ))}
     </div>
-  );
-};
+  </>
+);
 
 export default SectionWrapper(Feedbacks, "");
