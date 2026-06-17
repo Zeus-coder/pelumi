@@ -1,87 +1,54 @@
 "use client";
 
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-
+import { motion } from "framer-motion";
 import { styles } from "@/app/style";
 import { experiences } from "@/constants";
 import { SectionWrapper } from "@/hoc";
-import Image from "next/image";
-
-interface Props {
-  experience: {
-    date: string;
-    icon: string;
-    iconBg: string;
-    title: string;
-    company_name: string;
-    points: string[];
-  };
-}
-
-const ExperienceCard = ({ experience }: Props) => {
-  return (
-    <VerticalTimelineElement
-      visible={true}
-      className="vertical-timeline-element--work"
-      contentStyle={{
-        background: "#ffffff",
-        color: "#18181b",
-        boxShadow: "0 4px 24px rgba(0,0,0,0.06)",
-        border: "1px solid #e4e4e7",
-      }}
-      contentArrowStyle={{ borderRight: "7px solid #e4e4e7" }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg, border: "2px solid #e4e4e7" }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full">
-          <Image
-            src={experience.icon}
-            alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
-          />
-        </div>
-      }
-    >
-      <div>
-        <h3 className="text-zinc-900 text-[24px] font-bold">{experience.title}</h3>
-        <p className="text-zinc-500 text-[16px] font-semibold" style={{ margin: 0 }}>
-          {experience.company_name}
-        </p>
-      </div>
-
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point: string, index: number) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-zinc-700 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
-    </VerticalTimelineElement>
-  );
-};
+import { fadeIn, textVariant } from "@/utils/motion";
 
 const Experience = () => {
   return (
     <>
-      <div>
-        <p className={`${styles.sectionSubText} text-center`}>What I have done so far</p>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Work Experience.</h2>
-      </div>
+      <motion.div variants={textVariant(1)}>
+        <p className={styles.sectionSubText}>Career</p>
+        <h2 className={styles.sectionHeadText}>Experience.</h2>
+      </motion.div>
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline lineColor="#e4e4e7">
-          {experiences.map((experience: any, index) => (
-            <ExperienceCard key={`experience-${index}`} experience={experience} />
-          ))}
-        </VerticalTimeline>
+      <div className="mt-14">
+        {experiences.map((exp, index) => (
+          <motion.div
+            key={`exp-${index}`}
+            variants={fadeIn("up", "spring", index * 0.15, 0.6)}
+            className="flex flex-col sm:flex-row gap-4 sm:gap-10 py-8 border-b border-zinc-100 last:border-0"
+          >
+            {/* Date column */}
+            <div className="sm:w-52 shrink-0">
+              <span className="font-mono text-xs text-zinc-400">{exp.date}</span>
+            </div>
+
+            {/* Content column */}
+            <div className="flex-1">
+              <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+                <h3 className="text-zinc-900 font-bold text-[17px]">{exp.title}</h3>
+                <span className="hidden sm:block text-zinc-300">·</span>
+                <span className="text-zinc-500 text-[15px]">{exp.company_name}</span>
+              </div>
+
+              <ul className="mt-4 space-y-2">
+                {exp.points.map((point: string, i: number) => (
+                  <li
+                    key={i}
+                    className="flex gap-3 text-zinc-500 text-[14px] leading-relaxed"
+                  >
+                    <span className="font-mono text-zinc-300 shrink-0 mt-0.5">—</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </>
   );

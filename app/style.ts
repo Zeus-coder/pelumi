@@ -1,17 +1,17 @@
 const styles = {
   paddingX: "sm:px-16 px-6",
-  paddingY: "sm:py-16 py-6",
-  padding: "sm:px-16 px-6 sm:py-16 py-10",
+  paddingY: "sm:py-24 py-16",
+  padding: "sm:px-16 px-6 sm:py-24 py-16",
 
   heroHeadText:
-    "font-black text-zinc-900 lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2",
+    "font-black text-zinc-900 lg:text-[96px] sm:text-[72px] xs:text-[56px] text-[44px] leading-none tracking-tight",
   heroSubText:
-    "text-zinc-500 font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
+    "text-zinc-500 font-medium lg:text-[22px] sm:text-[18px] text-[16px]",
 
   sectionHeadText:
-    "text-zinc-900 font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
+    "text-zinc-900 font-black md:text-[56px] sm:text-[44px] xs:text-[36px] text-[28px] tracking-tight",
   sectionSubText:
-    "sm:text-[18px] text-[14px] text-zinc-500 uppercase tracking-wider",
+    "font-mono text-[11px] text-zinc-400 uppercase tracking-[0.2em] mb-3",
 };
 
 export { styles };

@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mono: ["JetBrains Mono", "monospace"],
+        sans: ["Poppins", "sans-serif"],
+      },
       colors: {
         primary: "#ffffff",
         secondary: "#71717a",
@@ -17,13 +21,10 @@ const config: Config = {
         "white-100": "#18181b",
       },
       boxShadow: {
-        card: "0px 4px 24px rgba(0,0,0,0.06)",
+        card: "0px 2px 16px rgba(0,0,0,0.05)",
       },
       screens: {
         xs: "450px",
-      },
-      backgroundImage: {
-        "hero-pattern": "none",
       },
     },
   },
