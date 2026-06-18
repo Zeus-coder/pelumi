@@ -1,4 +1,20 @@
-import { ams, heza, black, dcl } from "../assets";
+import {
+  ams,
+  heza,
+  black,
+  dcl,
+  seren,
+  azibaweb,
+  azibamobile,
+  jobview,
+  opil,
+  ramapp,
+  rangeslider,
+  ridermobile,
+  uboatworx,
+  valuapp,
+  zana,
+} from "../assets";
 
 export const navLinks = [
   { id: "about",   title: "About"   },
@@ -130,6 +146,124 @@ const projects = [
     ],
     image:            dcl,
     source_code_link: "https://dotcirclelabs.com/",
+  },
+  {
+    name:        "Serendpt",
+    description: "AI app that reads your documents aloud like a podcast, answers questions about them, and keeps a sense of humor while doing it.",
+    tags: [
+      { name: "react native", color: "blue-text-gradient"  },
+      { name: "expo",         color: "green-text-gradient" },
+      { name: "ai",           color: "pink-text-gradient"  },
+    ],
+    image:            seren,
+    source_code_link: "https://seren.guru/",
+  },
+  {
+    name:        "Aziba",
+    description: "Fashion e-commerce marketplace curating intentional, design-focused brands for a mobile-first shopping experience.",
+    tags: [
+      { name: "nextjs",   color: "blue-text-gradient"  },
+      { name: "tailwind", color: "green-text-gradient" },
+    ],
+    image:            azibaweb,
+    source_code_link: "https://www.aziba.co/",
+  },
+  {
+    name:        "Aziba Mobile",
+    description: "React Native companion app for Aziba's fashion marketplace, with Stripe and Paystack checkout and Google/Apple sign-in.",
+    tags: [
+      { name: "react native",  color: "blue-text-gradient"  },
+      { name: "expo",          color: "green-text-gradient" },
+      { name: "redux toolkit", color: "pink-text-gradient"  },
+    ],
+    image:            azibamobile,
+    source_code_link: "https://play.google.com/store/apps/details?id=com.aziba.aziba&hl=en",
+  },
+  {
+    name:        "JobView",
+    description: "Personal job-search aggregator that scrapes listings from multiple sources, tracks application status, and auto-generates a tailored CV per job.",
+    tags: [
+      { name: "react",    color: "blue-text-gradient"  },
+      { name: "nestjs",   color: "green-text-gradient" },
+      { name: "firebase", color: "pink-text-gradient"  },
+    ],
+    image:            jobview,
+    source_code_link: "https://usejobview.netlify.app/",
+  },
+  {
+    name:        "Opil Energies",
+    description: "Marketing site for Opil Energies, building out Nigeria's CNG energy hub network for cleaner, cheaper fuel.",
+    tags: [
+      { name: "react",    color: "blue-text-gradient"  },
+      { name: "vite",     color: "green-text-gradient" },
+      { name: "tailwind", color: "pink-text-gradient"  },
+    ],
+    image:            opil,
+    source_code_link: "https://opilenergies.netlify.app/",
+  },
+  {
+    name:        "RAM",
+    description: "End-to-end encrypted, memory-native live streaming platform — content streams in, plays, and vanishes with zero disk writes.",
+    tags: [
+      { name: "react",   color: "blue-text-gradient"  },
+      { name: "express", color: "green-text-gradient" },
+      { name: "firebase", color: "pink-text-gradient" },
+    ],
+    image:            ramapp,
+    source_code_link: "https://ram-app.netlify.app/",
+  },
+  {
+    name:        "react-native-range-slider-expo",
+    description: "Open-source, customizable range slider component for React Native and Expo apps, published to npm.",
+    tags: [
+      { name: "react native", color: "blue-text-gradient"  },
+      { name: "npm",          color: "green-text-gradient" },
+      { name: "open source",  color: "pink-text-gradient"  },
+    ],
+    image:            rangeslider,
+    source_code_link: "https://www.npmjs.com/package/@pelumi_coder/react-native-range-slider-expo",
+  },
+  {
+    name:        "Shipbubble Fleet",
+    description: "Rider/fleet mobile app for Shipbubble's logistics platform, handling order pickup, delivery, and live location tracking.",
+    tags: [
+      { name: "react native",  color: "blue-text-gradient"  },
+      { name: "expo",          color: "green-text-gradient" },
+      { name: "redux toolkit", color: "pink-text-gradient"  },
+    ],
+    image:            ridermobile,
+    source_code_link: "https://play.google.com/store/apps/details?id=com.shipbubble.rider&hl=en",
+  },
+  {
+    name:        "U-Boat Worx",
+    description: "Revamped marketing website for U-Boat Worx, the world's leading manufacturer of private submarines.",
+    tags: [
+      { name: "nextjs",   color: "blue-text-gradient"  },
+      { name: "tailwind", color: "green-text-gradient" },
+    ],
+    image:            uboatworx,
+    source_code_link: "https://uboatworx-revamp.netlify.app/",
+  },
+  {
+    name:        "Valu",
+    description: "Mobile app (beta) that scans a barcode or photo to instantly compare prices across retailers and alerts you when prices drop.",
+    tags: [
+      { name: "react native", color: "blue-text-gradient"  },
+      { name: "expo",         color: "green-text-gradient" },
+      { name: "firebase",     color: "pink-text-gradient"  },
+    ],
+    image:            valuapp,
+    source_code_link: "https://valu-app.netlify.app/",
+  },
+  {
+    name:        "Zana",
+    description: "Africa's AI marketplace to buy and sell prompts, agents, datasets, and research reports with local-currency payouts.",
+    tags: [
+      { name: "nextjs",   color: "blue-text-gradient"  },
+      { name: "tailwind", color: "green-text-gradient" },
+    ],
+    image:            zana,
+    source_code_link: "https://usezana.netlify.app/",
   },
 ];
 
