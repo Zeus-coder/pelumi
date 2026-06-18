@@ -17,8 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleTagManager gtmId="G-F9S879P7VG" />
-      <Navbar />
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
