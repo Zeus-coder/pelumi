@@ -34,6 +34,17 @@ import ams from "./ams.png";
 import heza from "./heza.png";
 import black from "./black.png";
 import dcl from "./dcl.png";
+import seren from "./seren.png";
+import azibaweb from "./azibaweb.png";
+import azibamobile from "./azibamobile.png";
+import jobview from "./jobview.png";
+import opil from "./opil.png";
+import ramapp from "./ramapp.png";
+import rangeslider from "./rangeslider.png";
+import ridermobile from "./ridermobile.png";
+import uboatworx from "./uboatworx.png";
+import valuapp from "./valuapp.png";
+import zana from "./zana.png";
 import jk from "./company/jk.png";
 import bng from "./company/bng.jpg";
 import gt from "./company/gt.png";
@@ -76,6 +87,17 @@ export {
   heza,
   black,
   dcl,
+  seren,
+  azibaweb,
+  azibamobile,
+  jobview,
+  opil,
+  ramapp,
+  rangeslider,
+  ridermobile,
+  uboatworx,
+  valuapp,
+  zana,
   jk,
   bng,
   gt,
